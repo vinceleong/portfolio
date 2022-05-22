@@ -6,7 +6,7 @@ import "styles/tailwind.css";
 
 function App({ Component, pageProps }) {
   return (
-    <ThemeProvider>
+    <ThemeProvider attribute="class">
       <Head>
         <meta content="width=device-width, initial-scale=1" name="viewport" />
       </Head>

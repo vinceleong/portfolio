@@ -9,26 +9,61 @@ export default function Home() {
 
   return (
     <div>
+      <div className="flex">
+        <motion.div
+          className="text-4xl pt-2 pb-2"
+          initial={{
+            opacity: 0,
+          }}
+          animate={{
+            opacity: 1,
+          }}
+          transition={{
+            duration: 0.5,
+          }}
+          style={{
+            whiteSpace: "nowrap",
+          }}
+        >
+          {`Hi, I'm Vince.`}
+        </motion.div>
+      </div>
       <motion.div
-        className="text-4xl pt-2 pb-2"
-        style={{
-          overflow: "hidden",
-          whiteSpace: "nowrap",
-        }}
+        className="text-2xl pt-2 pb-2 "
         initial={{
-          width: 0,
+          opacity: 0,
         }}
         animate={{
-          width: "100%",
+          opacity: 1,
         }}
         transition={{
-          duration: 3.4,
+          delay: 1,
+          duration: 0.5,
         }}
       >
-        Hi, I'm Chun Yong
-        <a href="https://api.whatsapp.com/send?phone=601111931731">
-          Click to connect
-        </a>
+        {"I reside in Malaysia and making "}
+        <span className="line-through">{"good"}</span>
+        <span className="text-sky-400">{" GREAT"}</span>{" "}
+        {" software is my passion."}
+      </motion.div>
+      <motion.div
+        className="mt-36 ud mr-16 text-lg"
+        initial={{
+          y: 100,
+          opacity: 0,
+        }}
+        animate={{
+          y: 0,
+          opacity: 1,
+        }}
+        transition={{
+          delay: 2,
+          duration: 0.8,
+        }}
+      >
+        {
+          "I love creating solutions for problems. And being able to create beautiful solutions is what drives me. "
+        }
       </motion.div>
     </div>
   );

@@ -1,23 +1,21 @@
 import { useEffect, useState } from "react";
 
 import Icon from "./Icon";
-import { useTheme } from "next-themes";
-import { FI } from "react-icons";
+import useDarkMode from "hooks/useDarkMode";
+
 function ThemeSwitch() {
   const [mounted, setMounted] = useState();
-  const { theme, setTheme, resolvedTheme } = useTheme();
+  const { isDarkMode, setTheme } = useDarkMode();
 
   useEffect(() => setMounted(true), []);
 
   return (
     <div
       onClick={() => {
-        setTheme(
-          theme === "dark" || resolvedTheme === "dark" ? "light" : "dark"
-        );
+        setTheme(isDarkMode ? "light" : "dark");
       }}
     >
-      {mounted && <Icon>{theme === "dark" ? "moon" : "sun"}</Icon>}
+      {mounted && <Icon>{isDarkMode ? "moon" : "sun"}</Icon>}
     </div>
   );
 }
