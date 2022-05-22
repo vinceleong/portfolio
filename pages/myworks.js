@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import useDarkMode from "hooks/useDarkMode";
+import { isMobile } from "react-device-detect";
 
 function WorkListItem({ title, description, url, imagePath, index }) {
   const { isDarkMode } = useDarkMode();
@@ -30,7 +31,7 @@ function WorkListItem({ title, description, url, imagePath, index }) {
 
   return (
     <motion.div
-      className="mb-6 p-3 pl-6 rounded-lg cursor-pointer flex flex-row items-center justify-between"
+      className="mb-6 p-0 md:p-3 md:pl-6 rounded-lg cursor-pointer flex flex-col items-start md:flex-row md:items-center md:justify-between"
       variants={animationVariants}
       initial="initial"
       animate="enter"
@@ -39,11 +40,11 @@ function WorkListItem({ title, description, url, imagePath, index }) {
         window.open(url, "_blank");
       }}
     >
-      <div className="">
+      <div>
         <div className="text-2xl font-bold">{title}</div>
         <div className="text-md mt-2">{description}</div>
       </div>
-      <div className="h-[160px]">
+      <div className="h-[160px] mt-4 md:mt-0">
         <img
           className="z-[1] rounded-lg"
           style={{
@@ -83,7 +84,7 @@ export default function MyWork() {
           delay: workList.length * 0.1 + 0.5,
           duration: 1,
         }}
-        className="pt-6 pl-6 rounded-lg text-xl font-light"
+        className="pt-6 md:pl-6 rounded-lg text-xl font-light"
       >
         More to come..
       </motion.div>

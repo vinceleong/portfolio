@@ -94,7 +94,7 @@ function MainLayout({ children }) {
     <div className="flex h-screen flex-col justify-between">
       {header}
       <div className="h-full w-full mb-auto w-full flex justify-center items-center]">
-        <div className="w-full xs:max-w-xs sm:max-w-xl md:max-w-2xl lg:max-w-3xl py-24">
+        <div className="w-full xs:max-w-xs sm:max-w-xl md:max-w-2xl lg:max-w-3xl px-5 md:px-0 py-24">
           {children}
         </div>
       </div>
