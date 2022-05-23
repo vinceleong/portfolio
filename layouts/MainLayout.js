@@ -44,13 +44,13 @@ function MainLayout({ children }) {
         {routes.map((route) => {
           const isActive = pathname === route.path;
           return (
-            <AnimatedButton key={route.path} className="mr-8">
-              <Link href={route.path}>
+            <Link key={route.path} href={route.path}>
+              <AnimatedButton className="mr-8">
                 <span className={isActive ? "font-bold" : "bold"}>
                   {route.label}
                 </span>
-              </Link>
-            </AnimatedButton>
+              </AnimatedButton>
+            </Link>
           );
         })}
         <AnimatedButton>
