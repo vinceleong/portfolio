@@ -44,7 +44,7 @@ export default function Home() {
         {"I reside in Malaysia and making "}
         <span className="line-through">{"good"}</span>
         <span className="text-sky-400">{" GREAT"}</span>{" "}
-        {" software is my passion."}
+        {" web apps is my passion."}
       </motion.div>
       <motion.div
         className="mt-36 ud mr-16 text-lg"
