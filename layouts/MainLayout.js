@@ -12,8 +12,11 @@ function AnimatedButton({ children, ...rest }) {
         scale: 1.1,
         fontWeight: "bold",
       }}
+      whileTap={{
+        scale: 1,
+      }}
       transition={{
-        duration: 0.1,
+        duration: 0.9,
       }}
       {...rest}
     >
@@ -32,6 +35,10 @@ function MainLayout({ children }) {
     {
       label: "My Works",
       path: "/myworks",
+    },
+    {
+      label: "Contact",
+      path: "/contact",
     },
   ];
 
@@ -91,23 +98,30 @@ function MainLayout({ children }) {
   );
 
   return (
-    <div className="flex h-screen flex-col justify-between">
-      {header}
-      <div className="h-full w-full mb-auto w-full flex justify-center items-center]">
-        <div className="w-full xs:max-w-xs sm:max-w-xl md:max-w-2xl lg:max-w-3xl px-5 md:px-0 py-24">
-          {children}
-        </div>
-      </div>
-      {/* <main
-        className="flex flex-col"
+    <div
+    // style={{
+    //   height: "100%",
+    //   width: "100%",
+    //   backgroundImage: "url('/images/me.png')",
+    //   backgroundPosition: "center",
+    //   backgroundRepeat: "no-repeat",
+    //   backgroundSize: "cover",
+    // }}
+    >
+      <div
+        className="flex h-screen flex-col justify-between"
         style={{
-          display: "flex",
-          flexDirection: "column",
+          zIndex: 2,
         }}
       >
-        {children}
-      </main> */}
-      {footer}
+        {header}
+        <div className="h-full w-full mb-auto w-full flex justify-center items-center]">
+          <div className="w-full xs:max-w-xs sm:max-w-xl md:max-w-2xl lg:max-w-3xl px-5 md:px-0 py-24">
+            {children}
+          </div>
+        </div>
+        {footer}
+      </div>
     </div>
   );
 }
