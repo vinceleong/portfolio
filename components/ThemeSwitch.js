@@ -2,10 +2,13 @@ import { useEffect, useState } from "react";
 
 import Icon from "./Icon";
 import useDarkMode from "hooks/useDarkMode";
+import { useTheme } from "next-themes";
 
 function ThemeSwitch() {
   const [mounted, setMounted] = useState();
-  const { isDarkMode, setTheme } = useDarkMode();
+
+  const { theme, setTheme, resolvedTheme } = useTheme();
+  const isDarkMode = theme === "dark" && resolvedTheme === "dark";
 
   useEffect(() => setMounted(true), []);
 
@@ -15,7 +18,7 @@ function ThemeSwitch() {
         setTheme(isDarkMode ? "light" : "dark");
       }}
     >
-      {mounted && <Icon>{isDarkMode ? "moon" : "sun"}</Icon>}
+      {mounted && <Icon>{isDarkMode ? "sun" : "moon"}</Icon>}
     </div>
   );
 }
