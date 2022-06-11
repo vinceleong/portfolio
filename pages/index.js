@@ -62,7 +62,7 @@ export default function Home() {
         }}
       >
         {
-          "I love creating solutions for problems. And being able to create beautiful solutions is what drives me! "
+          "I love creating solutions for problems. And being able to create beautiful solutions is what drives me. "
         }
       </motion.div>
     </div>
