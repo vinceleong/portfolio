@@ -1,9 +1,7 @@
 import { motion } from "framer-motion";
-import useDarkMode from "hooks/useDarkMode";
-import { isMobile } from "react-device-detect";
+import Image from "next/image";
 
-function WorkListItem({ title, description, url, imagePath, index }) {
-  const { isDarkMode } = useDarkMode();
+function WorkListItem({ title, description, url, imagePath, index, alt, tags }) {
 
   const animationVariants = {
     initial: {
@@ -20,9 +18,6 @@ function WorkListItem({ title, description, url, imagePath, index }) {
     },
     hover: {
       scale: 1.1,
-      borderWidth: 2,
-      borderColor: isDarkMode ? "#FFFFFF" : "#000000",
-      borderStyle: "solid",
       transition: {
         duration: 0.3,
       },
@@ -31,7 +26,7 @@ function WorkListItem({ title, description, url, imagePath, index }) {
 
   return (
     <motion.div
-      className="mb-6 p-0 md:p-3 md:pl-6 rounded-lg cursor-pointer flex flex-col items-start md:flex-row md:items-center md:justify-between"
+      className="mb-6 p-0 md:p-3 md:pl-6 rounded-lg cursor-pointer flex flex-col items-start md:flex-row md:items-center md:justify-between hover:outline outline-2 outline-black dark:outline-white"
       variants={animationVariants}
       initial="initial"
       animate="enter"
@@ -43,30 +38,49 @@ function WorkListItem({ title, description, url, imagePath, index }) {
       <div>
         <div className="text-2xl font-bold">{title}</div>
         <div className="text-md mt-2">{description}</div>
+        {
+          tags && <div className="flex gap-2 mt-2 mb-4 md:mb-0">
+            {
+              tags.map(tag => <Tag key={tag} text={tag} />)
+            }
+          </div>
+        }
       </div>
-      <div className="h-[160px] mt-4 md:mt-0">
-        <img
+      <div style={{ height: "160px", width: "260px", position: "relative" }}>
+        <Image
           className="z-[1] rounded-lg"
-          style={{
-            maxHeight: "100%",
-            maxWidth: "100%",
-          }}
           src={imagePath}
-          alt="wame.png"
+          alt={alt}
+          layout="fill"
+          objectFit="cover"
         />
       </div>
     </motion.div>
   );
 }
 
+const Tag = ({ text }) => {
+  return <span>#{text}</span>
+}
+
 export default function MyWork() {
   const workList = [
     {
       title: "Wame",
-      description: "Open Whatsapp Chat without Adding Contact",
+      description: "Open Whatsapp chat without adding contact",
       url: "https://wameapp.vercel.app/",
       imagePath: "/images/works/wame.png",
+      alt: "wame.png",
+      tags: ["nextjs"]
     },
+    {
+      title: "E-commerce",
+      description: "A mobile friendly demo e-commerce",
+      url: "https://ecommerce-vincel.vercel.app/",
+      imagePath: "/images/works/ecommerce.png",
+      alt: "ecommerce.png",
+      tags: ["nextjs", "typescript"]
+    }
   ];
   return (
     <div>
