@@ -26,7 +26,7 @@ function WorkListItem({ title, description, url, imagePath, index, alt, tags }) 
 
   return (
     <motion.div
-      className="mb-6 p-0 md:p-3 md:pl-6 rounded-lg cursor-pointer flex flex-col items-start md:flex-row md:items-center md:justify-between hover:outline outline-2 outline-black dark:outline-white"
+      className="mb-6 p-0 md:p-3 md:pl-6 rounded-lg cursor-pointer flex flex-col items-start md:flex-row md:items-center md:justify-between md:hover:outline outline-2 outline-black dark:outline-white"
       variants={animationVariants}
       initial="initial"
       animate="enter"
