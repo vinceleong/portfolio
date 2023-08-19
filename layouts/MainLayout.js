@@ -60,9 +60,9 @@ function MainLayout({ children }) {
             </Link>
           );
         })}
-        <AnimatedButton>
+        {/* <AnimatedButton>
           <ThemeSwitch />
-        </AnimatedButton>
+        </AnimatedButton> */}
       </div>
     </header>
   );

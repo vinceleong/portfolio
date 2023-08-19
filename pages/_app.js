@@ -1,8 +1,9 @@
-import { ThemeProvider } from "next-themes";
 import Head from "next/head";
-import MainLayout from "../layouts/MainLayout";
+import { ThemeProvider } from "next-themes";
 import "styles/globals.css";
 import "styles/tailwind.css";
+
+import MainLayout from "../layouts/MainLayout";
 
 function App({ Component, pageProps }) {
   return (
