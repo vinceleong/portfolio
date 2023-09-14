@@ -98,16 +98,7 @@ function MainLayout({ children }) {
   );
 
   return (
-    <div
-    // style={{
-    //   height: "100%",
-    //   width: "100%",
-    //   backgroundImage: "url('/images/me.png')",
-    //   backgroundPosition: "center",
-    //   backgroundRepeat: "no-repeat",
-    //   backgroundSize: "cover",
-    // }}
-    >
+    <div>
       <div
         className="flex h-screen flex-col justify-between"
         style={{
