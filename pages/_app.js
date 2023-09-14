@@ -12,6 +12,7 @@ function App({ Component, pageProps }) {
       storageKey="vincel-theme"
       defaultTheme="system"
       enableSystem={true}
+      forcedTheme={Component.theme || null}
     >
       <Head>
         <meta content="width=device-width, initial-scale=1" name="viewport" />

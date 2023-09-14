@@ -57,7 +57,7 @@ export default function Home() {
       ></canvas>
       <div className="flex">
         <motion.div
-          className="text-4xl pt-2 pb-2  text-neutral-50"
+          className="text-4xl pt-2 pb-2"
           initial={{
             opacity: 0,
           }}
@@ -75,7 +75,7 @@ export default function Home() {
         </motion.div>
       </div>
       <motion.div
-        className="text-2xl pt-2 pb-2 text-neutral-50"
+        className="text-2xl pt-2 pb-2"
         initial={{
           opacity: 0,
         }}
@@ -93,7 +93,7 @@ export default function Home() {
         {" web apps is my passion."}
       </motion.div>
       <motion.div
-        className="mt-36 ud mr-16 text-lg  text-neutral-50"
+        className="mt-36 ud mr-16 text-lg"
         initial={{
           y: 100,
           opacity: 0,
@@ -114,3 +114,5 @@ export default function Home() {
     </div>
   );
 }
+
+Home.theme = "dark";
