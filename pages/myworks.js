@@ -51,8 +51,8 @@ function WorkListItem({ title, description, url, imagePath, index, alt, tags }) 
           className="z-[1] rounded-lg"
           src={imagePath}
           alt={alt}
-          layout="fill"
-          objectFit="cover"
+          fill
+          style={{ objectFit: "cover" }}
         />
       </div>
     </motion.div>
