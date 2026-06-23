@@ -46,7 +46,7 @@ function WorkListItem({ title, description, url, imagePath, index, alt, tags }) 
           </div>
         }
       </div>
-      <div style={{ height: "160px", width: "260px", position: "relative" }}>
+      <div style={{ height: "160px", width: "260px", position: "relative", flexShrink: 0 }} className="mt-4 md:mt-0">
         <Image
           className="z-[1] rounded-lg"
           src={imagePath}
@@ -66,12 +66,12 @@ const Tag = ({ text }) => {
 export default function MyWork() {
   const workList = [
     {
-      title: "Wame",
-      description: "Open Whatsapp chat without adding contact",
-      url: "https://wameapp.vercel.app/",
-      imagePath: "/images/works/wame.png",
-      alt: "wame.png",
-      tags: ["nextjs"]
+      title: "Payout Control System",
+      description: "A payment system that has an approval layer between the payer and the payee. Demo accounts available.",
+      url: "https://payment-control-system.vercel.app/",
+      imagePath: "/images/works/payout-control-system.png",
+      alt: "payout-control-system.png",
+      tags: ["nextjs", "typescript", "billplz"]
     },
     {
       title: "E-commerce",
@@ -80,7 +80,15 @@ export default function MyWork() {
       imagePath: "/images/works/ecommerce.png",
       alt: "ecommerce.png",
       tags: ["nextjs", "typescript"]
-    }
+    },
+    {
+      title: "Wame",
+      description: "Open Whatsapp chat without adding contact",
+      url: "https://wameapp.vercel.app/",
+      imagePath: "/images/works/wame.png",
+      alt: "wame.png",
+      tags: ["nextjs"]
+    },
   ];
   return (
     <div>
