@@ -114,7 +114,7 @@ export default function MyWork() {
     },
   ];
   return (
-    <div>
+    <div className="pb-6">
       {workList.map((work, index) => (
         <WorkListItem key={work.url} {...work} index={index} />
       ))}

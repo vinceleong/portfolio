@@ -5,6 +5,8 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 import SEO from "components/SEO";
 
+  const HIDDEN_FOOTER_PATHS = ["/myworks"];
+
 function AnimatedButton({ children, ...rest }) {
   return (
     <motion.button
@@ -43,6 +45,7 @@ function MainLayout({ children }) {
   ];
 
   const { pathname } = router;
+
 
   const header = (
     <header>
@@ -111,7 +114,7 @@ function MainLayout({ children }) {
             {children}
           </div>
         </div>
-        {footer}
+        {HIDDEN_FOOTER_PATHS.includes(pathname) ? null : footer}
       </div>
     </div>
   );
