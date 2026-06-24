@@ -32,6 +32,11 @@ function WorkListItem({ title, description, url, imagePath, index, alt, tags }) 
       animate="enter"
       whileHover="hover"
       onClick={() => {
+        if(!url) {
+          alert("This is a private project and cannot be accessed publicly.");
+          return;
+        }
+
         window.open(url, "_blank");
       }}
     >
@@ -46,7 +51,8 @@ function WorkListItem({ title, description, url, imagePath, index, alt, tags }) 
           </div>
         }
       </div>
-      <div style={{ height: "160px", width: "260px", position: "relative", flexShrink: 0 }} className="mt-4 md:mt-0">
+      {
+        imagePath && <div style={{ height: "160px", width: "260px", position: "relative", flexShrink: 0 }} className="mt-4 md:mt-0">
         <Image
           className="z-[1] rounded-lg"
           src={imagePath}
@@ -55,6 +61,7 @@ function WorkListItem({ title, description, url, imagePath, index, alt, tags }) 
           style={{ objectFit: "cover" }}
         />
       </div>
+      }
     </motion.div>
   );
 }
@@ -67,19 +74,35 @@ export default function MyWork() {
   const workList = [
     {
       title: "Payout Control System",
-      description: "A payment system that has an approval layer between the payer and the payee. Demo accounts available.",
+      description: "A payment system that has an advanced approval layer between the payer and the payee. Demo accounts available.",
       url: "https://payment-control-system.vercel.app/",
       imagePath: "/images/works/payout-control-system.png",
       alt: "payout-control-system.png",
-      tags: ["nextjs", "typescript", "billplz"]
+      tags: ["nextjs", "typescript", "postgresql","billplz"]
     },
     {
-      title: "E-commerce",
+      title: "E-commerce Demo",
       description: "A mobile friendly demo e-commerce",
       url: "https://ecommerce-vincel.vercel.app/",
       imagePath: "/images/works/ecommerce.png",
       alt: "ecommerce.png",
       tags: ["nextjs", "typescript"]
+    },
+    {
+      title: "Warehouse Management System",
+      description: "A custom system featuring workflows from material receipt, processing, to sales. Includes stock tracking with printed QR, access control, master data, and operational reporting. ",
+      url: "",
+      imagePath: "",
+      alt: "",
+      tags: ["nextjs", "typescript", "postgresql"]
+    },
+    {
+      title: "Qr Access Control System",
+      description: "An access control system that allows entry to a door/barrier gate by scanning a QR code.",
+      url: "",
+      imagePath: "",
+      alt: "",
+      tags: ["nodejs", "rpi"]
     },
     {
       title: "Wame",
@@ -108,7 +131,7 @@ export default function MyWork() {
         }}
         className="pt-6 md:pl-6 rounded-lg text-xl font-light"
       >
-        More to come..
+        ... and more
       </motion.div>
     </div>
   );
