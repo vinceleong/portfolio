@@ -73,22 +73,6 @@ const Tag = ({ text }) => {
 export default function MyWork() {
   const workList = [
     {
-      title: "Payout Control System",
-      description: "A payment system that has an advanced approval layer between the payer and the payee. Demo accounts available.",
-      url: "https://payment-control-system.vercel.app/",
-      imagePath: "/images/works/payout-control-system.png",
-      alt: "payout-control-system.png",
-      tags: ["nextjs", "typescript", "postgresql","billplz"]
-    },
-    {
-      title: "E-commerce Demo",
-      description: "A mobile friendly demo e-commerce",
-      url: "https://ecommerce-vincel.vercel.app/",
-      imagePath: "/images/works/ecommerce.png",
-      alt: "ecommerce.png",
-      tags: ["nextjs", "typescript"]
-    },
-    {
       title: "Warehouse Management System",
       description: "A custom system featuring workflows from material receipt, processing, to sales. Includes stock tracking with printed QR, access control, master data, and operational reporting. ",
       url: "",
@@ -98,25 +82,41 @@ export default function MyWork() {
     },
     {
       title: "Qr Access Control System",
-      description: "An access control system that allows entry to a door/barrier gate by scanning a QR code.",
+      description: "An custom made access control system that allows entry to a door/barrier gate by scanning a QR code. Developed from scatch and collaborated with a local hardware team.",
       url: "",
       imagePath: "",
       alt: "",
-      tags: ["nodejs", "rpi"]
+      tags: ["nodejs", "iot", "rpi"]
     },
     {
       title: "Wame",
-      description: "Open Whatsapp chat without adding contact",
+      description: "Open Whatsapp chat without adding contact.",
       url: "https://wameapp.vercel.app/",
       imagePath: "/images/works/wame.png",
       alt: "wame.png",
       tags: ["nextjs"]
     },
+    {
+      title: "Payout Control System",
+      description: "A payment system that has an advanced approval layer between the payer and the payee. Demo accounts available.",
+      url: "https://payment-control-system.vercel.app/",
+      imagePath: "/images/works/payout-control-system.png",
+      alt: "payout-control-system.png",
+      tags: ["nextjs", "typescript", "postgresql","billplz"]
+    },
+    {
+      title: "E-commerce UI",
+      description: "A mobile friendly e-commerce website that demonstrates great website user experience on mobile.",
+      url: "https://ecommerce-vincel.vercel.app/",
+      imagePath: "/images/works/ecommerce.png",
+      alt: "ecommerce.png",
+      tags: ["nextjs", "typescript"]
+    },
   ];
   return (
     <div className="pb-6">
       {workList.map((work, index) => (
-        <WorkListItem key={work.url} {...work} index={index} />
+        <WorkListItem key={work.title} {...work} index={index} />
       ))}
       <motion.div
         initial={{
