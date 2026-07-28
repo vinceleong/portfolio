@@ -39,6 +39,7 @@ export default function Contact() {
       }}
     >
       <div className="flex flex-col justify-center items-center text-lg">
+        <div className="pb-10">Need a system for your business?</div>
         <div>Email me @&nbsp;</div>
         <div className="h-[5px]" />
         <div className="cursor-pointer">leongchunyong@gmail.com</div>

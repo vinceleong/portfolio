@@ -38,7 +38,7 @@ export default function Home() {
       renderer.render(scene, camera);
     }
 
-    animate();
+    // animate();
   }, []);
 
   return (
@@ -90,7 +90,7 @@ export default function Home() {
         {"I reside in Malaysia and making "}
         <span className="line-through">{"good"}</span>
         <span className="text-sky-400">{" GREAT"}</span>{" "}
-        {" web apps is my passion."}
+        {" softwares is my passion."}
       </motion.div>
       <motion.div
         className="mt-36 ud mr-16 text-lg"
@@ -108,7 +108,7 @@ export default function Home() {
         }}
       >
         {
-          "I love creating solutions for problems. And being able to create beautiful solutions is what drives me. "
+          "I work with businesses to identify what's actually costing them time or money, then build a system to fix it. From custom workflows to full platform builds. The goal isn't just software; it's a solution that delivers value to the business and matches how it operates."
         }
       </motion.div>
     </div>

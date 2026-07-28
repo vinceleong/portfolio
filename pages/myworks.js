@@ -78,7 +78,7 @@ export default function MyWork() {
       url: "",
       imagePath: "",
       alt: "",
-      tags: ["nextjs", "typescript", "postgresql"]
+      tags: ["nextjs", "typescript", "fluttermobile", "postgresql"]
     },
     {
       title: "Qr Access Control System",
@@ -86,15 +86,15 @@ export default function MyWork() {
       url: "",
       imagePath: "",
       alt: "",
-      tags: ["nodejs", "iot", "rpi"]
+      tags: ["nodejs", "iot", "rpi", "firestore"]
     },
     {
-      title: "Wame",
-      description: "Open Whatsapp chat without adding contact.",
-      url: "https://wameapp.vercel.app/",
-      imagePath: "/images/works/wame.png",
-      alt: "wame.png",
-      tags: ["nextjs"]
+      title: "Project Management System",
+      description: "A Monday.com like project management system that allows users to create projects, tasks, and track progress. Features include kanban board, dynamic tables, charts that pull data from table inputs, and team collaboration tools.",
+      url: "",
+      imagePath: "/images/works/project-management-system.png",
+      alt: "project-management-system.png",
+      tags: ["nextjs", "typescript", "fluttermobile", "firestore"]
     },
     {
       title: "Payout Control System",
@@ -105,7 +105,15 @@ export default function MyWork() {
       tags: ["nextjs", "typescript", "postgresql","billplz"]
     },
     {
-      title: "E-commerce UI",
+      title: "Wame",
+      description: "Open Whatsapp chat without adding contact.",
+      url: "https://wameapp.vercel.app/",
+      imagePath: "/images/works/wame.png",
+      alt: "wame.png",
+      tags: ["nextjs"]
+    },
+    {
+      title: "E-commerce User Interface",
       description: "A mobile friendly e-commerce website that demonstrates great website user experience on mobile.",
       url: "https://ecommerce-vincel.vercel.app/",
       imagePath: "/images/works/ecommerce.png",

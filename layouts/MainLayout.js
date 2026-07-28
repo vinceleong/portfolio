@@ -34,6 +34,10 @@ function MainLayout({ children }) {
       label: "Vince",
       path: "/",
     },
+    // {
+    //   label: "How I Work",
+    //   path: "/how-i-work",
+    // },
     {
       label: "My Works",
       path: "/myworks",
