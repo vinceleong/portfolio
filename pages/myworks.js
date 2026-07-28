@@ -82,7 +82,7 @@ export default function MyWork() {
     },
     {
       title: "Qr Access Control System",
-      description: "An custom made access control system that allows entry to a door/barrier gate by scanning a QR code. Developed from scatch and collaborated with a local hardware team.",
+      description: "An custom made access control system that allows entry to a door/barrier gate by scanning a QR code. Developed from scatch and collaborated with a local hardware team. Features include complex visitor verification (visit schedule, black list, etc.), 2 layer access verification via android app, and offline mode.",
       url: "",
       imagePath: "",
       alt: "",
