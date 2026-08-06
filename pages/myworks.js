@@ -74,7 +74,7 @@ export default function MyWork() {
   const workList = [
     {
       title: "Production Management System",
-      description: "A manufacturing company was running production tracking on a legacy system that charged a monthly per-head fee and was riddled with bugs, making it difficult for staff to use effectively. They also looked to digitalize  more of their processes and documents. My team designed and built a web and mobile system covering the full workflow - material receipt, processing, stock management, sales, and delivery. With reporting, access control, master data management, and QR-based stock tracking. The inventory department now tracks stock  more efficiently, and information flows between departments in real time.",
+      description: "A manufacturing company was running production tracking on a legacy system that charged a monthly per-head fee and was riddled with bugs. They also looked to digitalize more of their processes and documents. My team designed and built a web and mobile system covering the full workflow - material receipt, processing, stock management, sales, and delivery. With reporting, access control, master data management, and QR-based stock tracking. The inventory department now tracks stock  more efficiently, and information flows between departments in real time.",
       url: "",
       imagePath: "",
       alt: "",
