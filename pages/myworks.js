@@ -73,8 +73,8 @@ const Tag = ({ text }) => {
 export default function MyWork() {
   const workList = [
     {
-      title: "Warehouse Management System",
-      description: "A custom system featuring workflows from material receipt, processing, to sales. Includes stock tracking with printed QR, access control, master data, and operational reporting. ",
+      title: "Production Management System",
+      description: "A manufacturing company was running production tracking on a legacy system that charged a monthly per-head fee and was riddled with bugs, making it difficult for staff to use effectively. They also looked to digitalize  more of their processes and documents. My team designed and built a web and mobile system covering the full workflow - material receipt, processing, stock management, sales, and delivery. With reporting, access control, master data management, and QR-based stock tracking. The inventory department now tracks stock  more efficiently, and information flows between departments in real time.",
       url: "",
       imagePath: "",
       alt: "",
@@ -82,11 +82,19 @@ export default function MyWork() {
     },
     {
       title: "Qr Access Control System",
-      description: "An custom made access control system that allows entry to a door/barrier gate by scanning a QR code. Developed from scatch and collaborated with a local hardware team. Features include complex visitor verification (visit schedule, black list, etc.), 2 layer access verification via android app, and offline mode.",
+      description: "As JaGaApp's client base grew, visitor check-ins at guarded entrances became a bottleneck - long queues, heavy reliance on security personnel. I designed and built a QR-based access control system from scratch, with custom hardware, firmware, and full integration with the JaGaApp VMS. Enabling visitor verification, two-layer approval via the Android app, and offline operation. The result: entry time dropped from 2 minutes to near-instant, and the guard headcount needed per site was reduced.",
       url: "",
       imagePath: "",
       alt: "",
       tags: ["nodejs", "iot", "rpi", "firestore"]
+    },
+    {
+      title: "E-invoice integration for JaGaCount (Accounting Software)",
+      description: "With LHDN's e-invoicing mandate requiring businesses to submit compliant e-invoices, JaGaCount needed a way for clients to meet the requirement without leaving the platform. I built and integrated an easy-to-use e-invoice module to   supporting  individual, batch, and consolidated submissions, with a submission tracker and an automatic retry-on-failure mechanism to handle failed transmissions. The module seamlessly integrates into the modules and now serves 20+ clients and has processed over 300,000 e-invoice submissions.",
+      url: "",
+      imagePath: "",
+      alt: "",
+      tags: ["nextjs", "nodejs", "firestore"]
     },
     {
       title: "Project Management System",
@@ -106,7 +114,7 @@ export default function MyWork() {
     },
     {
       title: "Wame",
-      description: "Open Whatsapp chat without adding contact.",
+      description: "Tired of having to add someone to contact just to send them a WhatsApp message? Wame solves that problem.",
       url: "https://wameapp.vercel.app/",
       imagePath: "/images/works/wame.png",
       alt: "wame.png",

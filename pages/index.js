@@ -107,9 +107,17 @@ export default function Home() {
           duration: 0.8,
         }}
       >
+        <div className="mb-4">
         {
-          "I work with businesses to identify what's actually costing them time or money, then build a system to fix it. From custom workflows to full platform builds. The goal isn't just software; it's a solution that delivers value to the business and matches how it operates."
+          "I work with businesses to help them generate more income or save time, by building a system that enables it."
         }
+        </div>
+        <div>
+        {
+          "From custom workflows to full system builds. The goal isn't just software, it's a solution that helps business where it matters."
+        }
+        </div>
+        
       </motion.div>
     </div>
   );
