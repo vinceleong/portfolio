@@ -1,7 +1,16 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 
-function WorkListItem({ title, description, url, imagePath, index, alt, tags }) {
+function WorkListItem({
+  title,
+  description,
+  url,
+  caseStudyPath,
+  imagePath,
+  index,
+  alt,
+  tags,
+}) {
 
   const animationVariants = {
     initial: {
@@ -32,6 +41,11 @@ function WorkListItem({ title, description, url, imagePath, index, alt, tags }) 
       animate="enter"
       whileHover="hover"
       onClick={() => {
+        if (caseStudyPath) {
+          window.location.href = caseStudyPath;
+          return;
+        }
+
         if(!url) {
           alert("This is a private project and cannot be accessed publicly.");
           return;
@@ -42,14 +56,19 @@ function WorkListItem({ title, description, url, imagePath, index, alt, tags }) 
     >
       <div>
         <div className="text-2xl font-bold">{title}</div>
-        <div className="text-md mt-2">{description}</div>
+        <div className="text-md mt-2 leading-relaxed">{description}</div>
         {
-          tags && <div className="flex gap-2 mt-2 mb-4 md:mb-0">
+          tags && <div className="flex flex-wrap gap-2 mt-3 mb-4 md:mb-0 text-sm opacity-80">
             {
               tags.map(tag => <Tag key={tag} text={tag} />)
             }
           </div>
         }
+        {caseStudyPath && (
+          <div className="mt-4 font-semibold text-sky-600 dark:text-sky-300">
+            Read detail →
+          </div>
+        )}
       </div>
       {
         imagePath && <div style={{ height: "160px", width: "260px", position: "relative", flexShrink: 0 }} className="mt-4 md:mt-0">
@@ -82,18 +101,18 @@ export default function MyWork() {
     },
     {
       title: "Qr Access Control System",
-      description: "As JaGaApp's client base grew, visitor check-ins at guarded entrances became a bottleneck - long queues, heavy reliance on security personnel. I designed and built a QR-based access control system from scratch, with custom hardware, firmware, and full integration with the JaGaApp VMS. Enabling visitor verification, two-layer approval via the Android app, and offline operation. The result: entry time dropped from 2 minutes to near-instant, and the guard headcount needed per site was reduced.",
-      url: "",
-      imagePath: "",
-      alt: "",
+      description: "An IoT access system for guarded communities that turns visitor and facility QR scans into verified gate access. It connects cloud visitor records, on-site QR readers, guard workflows, and relay hardware.",
+      caseStudyPath: "/myworks/qr-access-control-system",
+      imagePath: "/images/works/qr-access-control-system/thumbnail.png",
+      alt: "QR Access Control System thumbnail",
       tags: ["nodejs", "iot", "rpi", "firestore"]
     },
     {
-      title: "E-invoice integration for JaGaCount (Accounting Software)",
-      description: "With LHDN's e-invoicing mandate requiring businesses to submit compliant e-invoices, JaGaCount needed a way for clients to meet the requirement without leaving the platform. I built and integrated an easy-to-use e-invoice module to   supporting  individual, batch, and consolidated submissions, with a submission tracker and an automatic retry-on-failure mechanism to handle failed transmissions. The module seamlessly integrates into the modules and now serves 20+ clients and has processed over 300,000 e-invoice submissions.",
-      url: "",
-      imagePath: "",
-      alt: "",
+      title: "E-invoice integration for JaGaCount (Accounting SaaS)",
+      description: "Built an e-invoice module for a property management accounting SaaS, enabling LHDN-compliant individual and consolidated submissions directly within the platform.",
+      caseStudyPath: "/myworks/jagacount-einvoice",
+      imagePath: "/images/works/jagacount/consolidated-invoice-dashboard.png",
+      alt: "Jagacount e-invoice thumbnail",
       tags: ["nextjs", "nodejs", "firestore"]
     },
     {

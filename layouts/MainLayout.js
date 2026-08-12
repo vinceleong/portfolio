@@ -118,7 +118,7 @@ function MainLayout({ children }) {
             {children}
           </div>
         </div>
-        {HIDDEN_FOOTER_PATHS.includes(pathname) ? null : footer}
+        {pathname.startsWith(HIDDEN_FOOTER_PATHS) ? null : footer}
       </div>
     </div>
   );
