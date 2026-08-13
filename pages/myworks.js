@@ -66,7 +66,7 @@ function WorkListItem({
         }
         {caseStudyPath && (
           <div className="mt-4 font-semibold text-sky-600 dark:text-sky-300">
-            Read detail →
+            View detail →
           </div>
         )}
       </div>
@@ -93,10 +93,10 @@ export default function MyWork() {
   const workList = [
     {
       title: "Production Management System",
-      description: "A manufacturing company was running production tracking on a legacy system that charged a monthly per-head fee and was riddled with bugs. They also looked to digitalize more of their processes and documents. My team designed and built a web and mobile system covering the full workflow - material receipt, processing, stock management, sales, and delivery. With reporting, access control, master data management, and QR-based stock tracking. The inventory department now tracks stock  more efficiently, and information flows between departments in real time.",
-      url: "",
-      imagePath: "",
-      alt: "",
+      description: "A warehouse & production ERP for a materials recycling company — digitizing weighbridge intake, QR-labelled stock tracking, and dispatch, with approval workflows, RBAC, and full audit trails.",
+      caseStudyPath: "/myworks/production-management-system",
+      imagePath: "/images/works/production-management-system/add-material-receipt.png",
+      alt: "Production Management System thumbnail",
       tags: ["nextjs", "typescript", "fluttermobile", "postgresql"]
     },
     {
