@@ -71,6 +71,11 @@ const carouselImages = [
     alt: "Master Data Setting",
     caption: "Manage master data for the select inputs available in system.",
   },
+  {
+    src: "/images/works/production-management-system/stock-mobile.png",
+    alt: "Stock Mobile",
+    caption: "Mobile app - after scanning a stock QR code, user may view stock details and adjust stock quantity with reason codes.",
+  },
 ];
 
 const caseSections = [
