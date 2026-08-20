@@ -13,8 +13,8 @@ function EmailActionButton({ icon, action }) {
     >
       <Icon
         style={{
-          height: "20px",
-          width: "20px",
+          height: "17px",
+          width: "17px",
         }}
         className="cursor-pointer"
         onClick={action}
@@ -40,22 +40,38 @@ export default function Contact() {
     >
       <div className="flex flex-col justify-center items-center text-lg">
         <div className="pb-10">Need a system for your business?</div>
-        <div>Email me @&nbsp;</div>
-        <div className="h-[5px]" />
-        <div className="cursor-pointer">leongchunyong@gmail.com</div>
-        <div className="h-[25px]" />
-        <div className="flex flex-row">
+        <div>Reach out to me at&nbsp;</div>
+        <div className="h-[5px] mt-5" />
+        <div className="flex justify-center items-center gap-3">
+          <div
+            className="cursor-pointer underline"
+            onClick={() => {
+              window.location.href = "https://wa.me/601111931731";
+            }}
+          >
+            +601111931731
+          </div>
+          <EmailActionButton
+            icon="copy"
+            action={() => {
+              navigator.clipboard.writeText("+601111931731");
+            }}
+          />
+        </div>
+        <div className="my-2">or</div>
+        <div className="flex justify-center items-center gap-3">
+          <div
+            className="cursor-pointer underline"
+            onClick={() => {
+              window.location.href = "mailto:leongchunyong@gmail.com";
+            }}
+          >
+            leongchunyong@gmail.com
+          </div>
           <EmailActionButton
             icon="copy"
             action={() => {
               navigator.clipboard.writeText("leongchunyong@gmail.com");
-            }}
-          />
-          <div className="w-[15px]" />
-          <EmailActionButton
-            icon="FiExternalLink"
-            action={() => {
-              window.location.href = "mailto:leongchunyong@gmail.com";
             }}
           />
         </div>
