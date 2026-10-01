@@ -69,6 +69,11 @@ function WorkListItem({
             View detail →
           </div>
         )}
+        {url && !caseStudyPath && (
+          <div className="mt-4 font-semibold text-sky-600 dark:text-sky-300">
+            View project →
+          </div>
+        )}
       </div>
       {
         imagePath && <div style={{ height: "160px", width: "260px", position: "relative", flexShrink: 0 }} className="mt-4 md:mt-0">
@@ -91,6 +96,14 @@ const Tag = ({ text }) => {
 
 export default function MyWork() {
   const workList = [
+    {
+      title: "Rent My Miata",
+      description: "A map-based listings board for privately owned Mazda MX-5s. Owners subscribe to put their cars on the map, and renters browse, favorite, and message them directly.",
+      url: "https://rentmymiata.online",
+      imagePath: "/images/works/rent-my-miata.png",
+      alt: "rent-my-miata.png",
+      tags: ["nextjs", "typescript", "supabase", "mailing", "stripe"]
+    },
     {
       title: "Production Management System",
       description: "A warehouse & production ERP for a materials recycling company — digitizing weighbridge intake, QR-labelled stock tracking, and dispatch, with approval workflows, RBAC, and full audit trails.",
