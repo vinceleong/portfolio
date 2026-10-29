@@ -5,7 +5,11 @@ import "styles/tailwind.css";
 
 import MainLayout from "../layouts/MainLayout";
 
+const withMainLayout = (page) => <MainLayout>{page}</MainLayout>;
+
 function App({ Component, pageProps }) {
+  const getLayout = Component.getLayout || withMainLayout;
+
   return (
     <ThemeProvider
       attribute="class"
@@ -17,9 +21,7 @@ function App({ Component, pageProps }) {
       <Head>
         <meta content="width=device-width, initial-scale=1" name="viewport" />
       </Head>
-      <MainLayout>
-        <Component {...pageProps} />
-      </MainLayout>
+      {getLayout(<Component {...pageProps} />)}
     </ThemeProvider>
   );
 }
